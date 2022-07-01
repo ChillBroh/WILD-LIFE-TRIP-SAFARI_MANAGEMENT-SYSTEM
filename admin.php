@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,30 @@
     <title>Admin Profile</title>
     <link rel="stylesheet" href="../css/admin.css">
 </head>
+
 <body>
     <?php
     include './headerforadmin.php';
     ?>
-    <?php 
+    <?php
     session_start();
     echo  $_SESSION['user_ID'];
-    if(!isset($_SESSION['user_ID'])){
-            header('Location:login.php');
+    if (!isset($_SESSION['user_ID'])) {
+        header('Location:login.php');
     }
     ?>
     <br>
     <div class="admin-container">
         <div class="adm-col ac1">
             <div class="credits">
-            <?php if(isset($_SESSION['user_ID'])){
-                     echo "<h1>".$_SESSION['username']."</h1>";
-                }else{
+                <?php if (isset($_SESSION['user_ID'])) {
+                    echo "<h1>" . $_SESSION['username'] . "</h1>";
+                } else {
                     echo "<div class=\"user\">Admin</div>";
                 }
-                
+
                 ?>
-                <button onclick="return confirm('Are you sure do you want to logout?')"class="submit-btn" ><a  href="logout.php">Log-Out</a></button>
+                <button onclick="return confirm('Are you sure do you want to logout?')" class="submit-btn"><a href="logout.php">Log-Out</a></button>
             </div>
             <div class="divider"></div>
             <div class="profile-frame">
@@ -98,6 +100,7 @@
             </div>
         </div>
     </div>
-    <?php include "./footer.php"?>
+    <?php include "./footer.php" ?>
 </body>
+
 </html>
