@@ -12,6 +12,7 @@ include './tdeleteInquiry.php';
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
